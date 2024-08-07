@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    gap: 10px; 
+    flex-wrap: wrap;
+}
+
+.btn {
+    flex: 1 1 auto;
+    /* This allows buttons to grow and shrink based on the container's width */
+    min-width: 100px; 
+    /* Minimum width for each button */
+    margin: 5px 0;
+}
+
+.main {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+.summary {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
