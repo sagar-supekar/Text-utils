@@ -2,10 +2,8 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import Demo from './components/Demo';
-import Address from './components/Address';
 import About from './components/About';
-import { BrowserRouter,Route,Routes,Link} from 'react-router-dom';
+import { BrowserRouter,Route,Routes} from 'react-router-dom';
 function App() {
   return (
   <div className="App">
@@ -19,6 +17,7 @@ function App() {
     </Routes>
 
   </BrowserRouter>
+  
 
 
    </>
