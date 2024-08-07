@@ -30,25 +30,26 @@ export default function TextForm(props) {
 
     const [text, setText] = useState("");
     const [state, setState] = useState({
-        color: "black",
+        color: "#132b4f",
         backgroundColor: "white"
     });
 
     const toggleButton = () => {
-        if (state.color === "black") {
+        if (state.color === "#132b4f") {
             setState({
                 color: "white",
-                backgroundColor: "black"
+                backgroundColor: "#132b4f"
             });
         } else {
             setState({
-                color: "black",
+                color: "#132b4f",
                 backgroundColor: "white"
             });
         }
     };
 
     return (
+        <div className="container">
         <div style={{ backgroundColor: state.backgroundColor, color: state.color }}>
             <div className="main">
                 <div className="mb-3">
@@ -60,11 +61,11 @@ export default function TextForm(props) {
                         value={text} 
                         onChange={handleOnChange} 
                         id="MyText" 
-                        rows="6" 
-                        cols="7"
+                        rows="5" 
+                        cols="0"
                     ></textarea>
                 </div>
-                <div className="container">
+                <div className="container1">
                     <button className="btn btn-primary" onClick={handleUpClick}>ToUppercase</button>
                     <button className="btn btn-primary" onClick={clearText}>Clear</button>
                     <button className="btn btn-primary" onClick={speak}>Speak</button>
@@ -75,6 +76,7 @@ export default function TextForm(props) {
                     <p>word = {text.split(" ").filter(word => word !== "").length} characters = {text.length}</p>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

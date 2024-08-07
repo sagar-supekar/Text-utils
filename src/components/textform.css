@@ -1,26 +1,42 @@
+/* Ensure container utilizes full width but centers the content */
 .container {
+    width: 100%;
+    max-width: 800px; /* Set a max-width to limit the container size */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.container1 {
     display: flex;
     gap: 10px; 
     flex-wrap: wrap;
-}
-
-.btn {
-    flex: 1 1 auto;
-    /* This allows buttons to grow and shrink based on the container's width */
-    min-width: 100px; 
-    /* Minimum width for each button */
-    margin: 5px 0;
 }
 
 .main {
     padding: 20px;
     max-width: 600px;
     margin: 0 auto;
+     /* Optional: Add border to visualize the div size */
+    border-radius: 8px; /* Optional: Add border-radius for better appearance */
 }
 
+/* Button styling with responsive behavior */
+.btn {
+    flex: 1 1 auto;
+    min-width: 100px;
+    margin: 5px 0;
+    gap:2px;
+}
+
+/* Textarea should fill its container's width */
 textarea {
     width: 100%;
-    resize: none;
+    resize: both;
+}
+
+.form-control {
+    width: 100%;
 }
 
 .summary {
@@ -30,7 +46,11 @@ textarea {
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        padding: 10px;
+    }
+
+    .main {
+        padding: 10px;
     }
 
     .btn {
